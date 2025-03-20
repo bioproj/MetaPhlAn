@@ -1364,7 +1364,7 @@ def main():
     no_map = False
     if pars['input_type'] == 'fasta' or pars['input_type'] == 'fastq':
         bow = pars['bowtie2db'] is not None
-
+        sys.stderr.write("pars['bowtie2db']:"+pars['bowtie2db'])
         if not bow:
             sys.stderr.write( "No MetaPhlAn BowTie2 database provided\n "
                               "[--bowtie2db and --index options]!\n"
