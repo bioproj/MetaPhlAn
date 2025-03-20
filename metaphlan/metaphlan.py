@@ -1401,7 +1401,7 @@ def main():
         bt2_ext = 'bt2l' if SGB_ANALYSIS else 'bt2'            
         if bow and not all([os.path.exists(".".join([str(pars['bowtie2db']), p]))
                             for p in ["1." + bt2_ext, "2." + bt2_ext, "3." + bt2_ext, "4." + bt2_ext, "rev.1." + bt2_ext, "rev.2." + bt2_ext]]):
-            print("pars['bowtie2db']:"+pars['bowtie2db'])
+            sys.stderr.write("pars['bowtie2db']:"+pars['bowtie2db'])
             sys.stderr.write("No MetaPhlAn BowTie2 database found (--index "
                              "option)!\nExpecting location {}\nExiting..."
                              .format(pars['bowtie2db']))
