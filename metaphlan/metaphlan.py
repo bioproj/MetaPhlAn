@@ -393,7 +393,7 @@ def set_mapping_arguments(index, bowtie2_db):
 
     if glob(os.path.join(bowtie2_db, "{}*.{}".format(index, bt2_ext))):
         bowtie2db = os.path.join(bowtie2_db, "{}".format(index))
-
+    sys.stderr.write("000" + os.path.join(bowtie2_db, "{}".format(index)) )
     return (mpa_pkl, bowtie2db)
 
 
