@@ -1339,10 +1339,10 @@ def main():
     else:
         viralTempFolder = None
 
-
+    sys.stderr.write("111 pars['bowtie2db']:"+pars['bowtie2db'])
     # set correct map_pkl and bowtie2db variables
     pars['mpa_pkl'], pars['bowtie2db'] = set_mapping_arguments(pars['index'], pars['bowtie2db'])
-
+    sys.stderr.write("222 pars['bowtie2db']:"+pars['bowtie2db'])
     if (pars['bt2_ps'] in ["sensitive-local", "very-sensitive-local"]) and (pars['min_alignment_len'] is None):
             pars['min_alignment_len'] = 100
             sys.stderr.write('Warning! bt2_ps is set to local mode, and min_alignment_len is None, I automatically '
